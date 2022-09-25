@@ -16,7 +16,7 @@ class Article(
     var slug: String = title.toSlug(),
     var addedAt: LocalDateTime = LocalDateTime.now(),
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     var id: Long? = null)
 {
     fun render():RenderedArticleDTO {
